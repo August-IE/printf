@@ -282,7 +282,8 @@ Output:
 Authors ✒️
 
 Augustus Idiata <August-IE>
+
 Chelsea Meyong <ChelseaBun>
 
-Acknowledgements 🙏
+Acknowledgements
 The _printf function emulates functionality of the C standard library function printf. This README borrows from the Linux man page printf(3)
