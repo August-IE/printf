@@ -16,7 +16,7 @@ int flags, int width, int precision, int size)
 char c = va_arg(types, int);
 return (handle_write_char(c, buffer, flags, width, precision, size));
 }
-/************************* PRINT A STRING *************************/
+/************************ PRINT A STRING *************************/
 /**
  * print_string - Prints a string
  * @types: List a of arguments
@@ -88,9 +88,9 @@ UNUSED(precision);
 UNUSED(size);
 return (write(1, "%%", 1));
 }
-/************************* PRINT INT *************************/
+/************************* PRINT INT ************************/
 /**
- * print_int - Print int
+ * print_int - A function that Prints  int
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags

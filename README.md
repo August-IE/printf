@@ -37,8 +37,12 @@ The function _printf writes output to standard output. The function writes under
 Prototype: int _printf(const char *format, ...);
 
 Return Value
+<<<<<<< HEAD
 
 Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns 0.
+=======
+Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is met, the function returns 0.
+>>>>>>> b498ab5384864aeff16b33d8743c59eee2a898fb
 
 Format of the Argument String
 
