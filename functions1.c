@@ -31,7 +31,7 @@ return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 /************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
 /**
- * print_octal - Prints an unsigned number in octal notation
+ * print_octal -A funtion that Prints an unsigned number in octal notation
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
