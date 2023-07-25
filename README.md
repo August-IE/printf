@@ -1,39 +1,38 @@
 0x11. C - printf Project
 
-_printf 📄
+_printf
 A formatted output conversion of a C program. The program is a pseudo- recreation of the C standard library function, printf.
 
-Dependencies 👫
+Sandbox
 The _printf function was coded on an Ubuntu 20.04 LTS machine.
 
-Usage 🏃
+Usage
 To use the _printf function, assuming the above dependencies have been installed, compile all .c files in the repository and include the header main.h with any main function.
 
 Example main.c:
-
 #include "main.h"
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
-    _printf("Hello, World!");
-
+    _printf("%b\n", 98);
     return (0);
 }
-Compilation:
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
 
-$ gcc *.c -o tester
-Output:
-
-$ ./tester
-Hello, World!
-$
-Description 💬
+Description
 The function _printf writes output to standard output. The function writes under the control of a format string that specifies how subsequent arguments (accessed via the variable-length argument facilities of stdarg) are converted for output.
 
 Prototype: int _printf(const char *format, ...);
 
 Return Value
-Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns -1.
+Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns 0.
 
 Format of the Argument String
 The format string argument is a constant character string composed of zero or more directives: ordinary characters (not %) which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Conversion specification is introduced by the character % and ends with a conversion specifier. In between the % character and conversion specifier, there may be (in order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier. The arguments must correspond with the conversion specifier, and are used in the order given.
