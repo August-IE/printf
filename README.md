@@ -1,15 +1,19 @@
-0x11. C - printf Project
+0x11. C - printf Project (By Augustus Idiata and Chelsea Meyong)
 
 _printf
+
 A formatted output conversion of a C program. The program is a pseudo- recreation of the C standard library function, printf.
 
 Sandbox
+
 The _printf function was coded on an Ubuntu 20.04 LTS machine.
 
 Usage
+
 To use the _printf function, assuming the above dependencies have been installed, compile all .c files in the repository and include the header main.h with any main function.
 
 Example main.c:
+
 #include "main.h"
 
 /**
@@ -27,22 +31,27 @@ alex@ubuntu:~/c/printf$ ./a.out
 1100010
 
 Description
+
 The function _printf writes output to standard output. The function writes under the control of a format string that specifies how subsequent arguments (accessed via the variable-length argument facilities of stdarg) are converted for output.
 
 Prototype: int _printf(const char *format, ...);
 
 Return Value
+
 Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns 0.
 
 Format of the Argument String
+
 The format string argument is a constant character string composed of zero or more directives: ordinary characters (not %) which are copied unchanged to the output stream; and conversion specifications, each of which results in fetching zero or more subsequent arguments. Conversion specification is introduced by the character % and ends with a conversion specifier. In between the % character and conversion specifier, there may be (in order) zero or more flags, an optional minimum field width, an optional precision and an optional length modifier. The arguments must correspond with the conversion specifier, and are used in the order given.
 
 Flag Characters
+
 The character % may be followed by zero or more of the following flags:
 
 For o conversions, the first character of the output string is prefixed with 0 if it was not zero already.
 For x converions, 0x is prepended for non-zero numbers.
 For X conversions, 0X is prepeneded for non-zero numbers.
+
 Example main.c:
 
 int main(void)
@@ -54,6 +63,7 @@ Output:
 0x7
 (space)
 A blank is left before a positive number or empty string produced by a signed conversion.
+
 Example main.c:
 
 int main(void)
@@ -66,6 +76,7 @@ Output:
 +
 A sign (+ or -) is always placed before a number produced by signed conversion.
 Overrides a space flag.
+
 Example main.c:
 
 int main(void)
@@ -90,6 +101,7 @@ Output:
 -
 The converted value is left-justified (padded on the right with blanks instead of on the left with blanks or zeroes).
 Overrides a 0 flag.
+
 Example main.c:
 
 int main(void)
@@ -100,6 +112,7 @@ Output:
 
 7    7
 Field Width
+
 After flags, a minimum field width may be specified by a decimal digit string The first digit must be non-zero. If the converted value has fewer characters than the provided width, the output is padded on the left or right with spaces (depending on whether the - flag was provided).
 
 Example main.c:
@@ -114,6 +127,7 @@ Ouptut:
 Alternatively, width may be provied as an argument using the * character For example, in the following: _printf("%*d\n", 6, 1); the argument 6 is considered the width for the conversion of the decimal 1.
 
 Precision
+
 After any flags or provided width, a precision may be specified by a . followed by a decimal digit string. For d, i, o, u, x, and X conversions, the precision specifies the minimum number of digits to appear. For s and S conversions, the precision specifies the maximum characters to be printed.
 
 Example main.c:
@@ -128,6 +142,7 @@ Output:
 Alternatively, precision may be provided as an argument using the * character after the .. For example, in the following: _printf("%.*d\n", 6, 1); the argument 6 is considered the precision for the conversion of the decimal 1.
 
 Length Modifiers
+
 After flags, width, and precision and before a conversion specifier, one of the following length modifiers may be provided:
 
 h
@@ -155,6 +170,7 @@ Output:
 
 9223372036854775807
 Conversion Specifiers
+
 The conversion specifier (introduced by the character %) is a character that specifies the type of conversion to be applied. The _printf function supports the following conversion specifiers:
 
 d, i
@@ -286,4 +302,5 @@ Augustus Idiata <August-IE>
 Chelsea Meyong <ChelseaBun>
 
 Acknowledgements
+
 The _printf function emulates functionality of the C standard library function printf. This README borrows from the Linux man page printf(3)
