@@ -44,7 +44,8 @@ width, flags, padd, extra_c, padd_start));
 }
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_printable - Function that Prints ascii codes in hexa of non printable chars
+ * print_non_printable - A function that Prints ascii codes in
+ * hexa of non printable chars
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
